@@ -1,0 +1,8 @@
+{
+    "apiServerURI": "https://yourrestgresqlapi.com/",
+    "homePostId": 1,
+    "articlesPostId": 2,
+    "projectsPostId": 3,
+    "contactPostId": 4,
+    "recentArticleNum": 3
+}

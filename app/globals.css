@@ -1,0 +1,308 @@
+/*@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*/
+
+:root {
+  --main-bg-color:#192535;
+  --sec-bg-color:#111b27;
+  --block-bg-color:#111b27;
+  --code-bg-color:#111b27;
+  --body-bg-color:#0c0f13;
+  --main-outline-color:#393E46;
+  --main-font-color:#EEEEEE;
+  --accent-cyan:#00ADB5;
+  --accent-cyan-dark:#007075;
+  --accent-orange:#ffa443;
+  --max-width:1200px;
+}
+
+body {
+  font-family: Sans-Serif;
+  color:var(--main-font-color);
+  background-color: var(--body-bg-color);
+  max-width:var(--max-width);
+  margin:auto;
+}
+
+.PostPage {
+  padding-left:1vw;
+  padding-right:1vw;
+  padding-bottom:1vw;
+  background-color:var(--sec-bg-color);
+}
+
+@media screen and (max-width: 800px) {
+  .PostPage {
+    padding-left:0;
+    padding-right:0;
+  }
+  body{
+    padding-left:2vw;
+    padding-right:2vw;
+  }
+} 
+
+.PostTitle {
+  color: var(--accent-cyan);
+  background-color: var(--main-bg-color);
+  width:100%;
+}
+
+.PostTitle h1{
+  padding:10px;
+  margin:0;
+  text-align:center;
+}
+
+.Post {
+  padding-top:1px;
+  padding-bottom:1vw;
+  max-width:var(--max-width);
+  margin: auto;
+  background-color: var(--main-bg-color);
+}
+
+.PostContainer {
+  background-color: var(--main-bg-color);
+  padding-left:5vw;
+  padding-right:5vw;
+  padding-bottom:1vw;
+}
+
+.PostContent {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  margin:auto;
+  background-color:var(--main-bg-color);
+  padding-bottom:10px;
+}
+
+.PostText a:link{
+  color:var(--accent-cyan);
+}
+
+.PostText a:visited{
+  color:var(--accent-cyan-dark);
+}
+
+.PostText a:hover{
+  color:var(--accent-orange)
+}
+
+.PostText img {
+  max-height: 50vh;
+  overflow: scroll;
+}
+
+.PostText blockquote {
+  color: #58a4de;
+  outline: 1px solid var(--main-outline-color);
+  background-color: var(--sec-bg-color);
+  overflow: auto;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  margin-left: 1vw;
+}
+
+.PostTableContainer{
+  overflow-x:auto;
+  overflow-y:hidden;
+}
+
+.PostTableContainer table, th, td {
+  border: 1px solid var(--main-outline-color);
+}
+
+.PostUnorderedListContainer {
+  overflow-x:auto;
+  margin-right:2vw;
+}
+
+.PostText hr {
+  border-color: #58a4de;
+}
+
+.PostText code{
+  font-size:85%;
+}
+
+/*
+ * The *not* selector in combination with the contains attribute
+ * selector allows us to apply css to all code not handled
+ * by React Syntax Highlighter's known languages.
+ * */
+.PostText code:not([class*="language-"]) {
+  font-family: Menlo, Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  display:inline-block;
+  padding-top:0.125rem;
+  padding-right: 0.25rem;
+  padding-left: 0.25rem;
+  color: var(--sec-bg-color);
+  background-color: var(--accent-cyan);
+  border-radius: 6px;
+  max-width:92vw;
+  overflow:auto;
+  vertical-align:-0.25rem;
+}
+
+.PostText details {
+  font-family: sans-serif;
+  color: var(--main-font-color);
+  background-color: var(--sec-bg-color);
+  outline: 1px solid var(--main-outline-color);
+  padding:6px 4px 4px 4px;
+}
+
+.PostText p {
+  overflow: auto;
+}
+
+.PostWidget {
+  margin-bottom: 1px;
+  padding-bottom: 2vw;
+}
+
+@media screen and (max-width: 800px) {
+  .PostContent {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    margin:auto;
+    width:100%;
+    background-color:var(--main-bg-color);
+  }
+}
+
+.Navbar {
+  background-color: var(--sec-bg-color);
+  margin:auto;
+  display:flex;
+  justify-content:center;
+  /*margin:10px;*/
+}
+
+.Navbar a{
+  color: var(--main-font-color);
+  background-color: var(--sec-bg-color);
+  text-align: center;
+  padding-left:2.5%;
+  padding-right:2.5%;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-right:5px;
+  margin-left:5px;
+  /*padding: 14px 16px;*/
+  text-decoration: none;
+  font-size: 17px;
+  width:20%;
+}
+
+.Navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  box-shadow: 0 0 10px #ddd; 
+}
+
+@media screen and (max-width: 800px) {
+  .Navbar {
+    flex-direction:column;
+    align-items:center;
+  }
+  .Navbar a{
+    width:100%;
+    margin:5px;
+    padding:0px;
+  }
+} 
+
+.Game{
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.Game iframe{
+  aspect-ratio:1/1;
+  width:100%;
+  max-height:90vh;
+  border:none;
+}
+
+.PostPreviewContainer{
+  /**
+   * User input values.
+   */
+  max-width:var(--max-width);
+  margin:auto;
+  /*padding:1vw;*/
+  background-color:var(--main-bg-color);
+
+  --grid-layout-gap: 10px;
+  --grid-column-count: 3;
+  --grid-item--min-width: 170px;
+
+  /**
+   * Calculated values.
+   */
+  --gap-count: calc(var(--grid-column-count) - 1);
+  --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+  --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr));
+  grid-gap: var(--grid-layout-gap);
+}
+
+.PostPreview{
+  margin:0px;
+}
+
+.PostButton{
+  color:var(--main-font-color);
+  background-color:var(--sec-bg-color);
+  width:100%;
+  height:100%;
+  border:none;
+  margin:0px;
+  transition-duration: 0.7s;
+}
+
+.PostButton:hover{
+  color:var(--accent-cyan);
+  box-shadow: 0 0 5px var(--accent-cyan); 
+}
+
+
+
+/*
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+*/
