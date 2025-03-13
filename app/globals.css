@@ -265,6 +265,7 @@ body {
   height:100%;
   border:none;
   margin:0px;
+  padding:1vw;
   transition-duration: 0.7s;
 }
 
