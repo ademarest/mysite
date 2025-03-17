@@ -1,3 +1,5 @@
+import React from "react";
+
 const PostPreview = (props: any) => {
   const url = props.gameId ? "/game/" + props.id : "/post/" + props.id;
   return (
@@ -25,7 +27,7 @@ const PostPreview = (props: any) => {
 }
 
 const PostPreviewGridFromData = (postDataArray : any) => {
-  postDataArray.sort((a:any, b:any) => new Date(b.postDatetime).valueOf() - new Date(b.postDatetime).valueOf());
+  postDataArray.sort((a:any, b:any) => new Date(b.postDatetime).valueOf() - new Date(a.postDatetime).valueOf());
   let posts = postDataArray.map((postData: any) => {
     const { postId, postTitle, postSubtext, postAuthor, postDatetime, gameId } = postData;
     return (
