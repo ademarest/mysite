@@ -1,7 +1,8 @@
-import React from "react";
+import React from 'react';
 
 const PostPreview = (props: any) => {
-  const url = props.gameId ? "/game/" + props.id : "/post/" + props.id;
+  const url = props.gameId ? '/game/' + props.id : '/post/' + props.id;
+  const date_str = new Date(props.datetime).toLocaleDateString('en-CA');
   return (
     <div
       key={props.id}
@@ -18,7 +19,7 @@ const PostPreview = (props: any) => {
             <p>{props.author}</p>
           </div>
           <div className={'PostPreviewDate'}>
-            <p>{props.datetime}</p>
+            <p>{date_str}</p>
           </div>
         </button>
       </a>
@@ -50,8 +51,8 @@ export default async function PostPreviewGrid({ postDataArray }: any) {
   const posts = postDataArray != null ? PostPreviewGridFromData(postDataArray) : <></>;
 
   return (
-    <div className={"PostContainer"}>
-      <div className={"PostPreviewContainer"}>
+    <div className={'PostContainer'}>
+      <div className={'PostPreviewContainer'}>
         {posts}
       </div>
     </div>
