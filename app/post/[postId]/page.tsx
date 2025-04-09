@@ -18,10 +18,11 @@ export async function generateStaticParams(){
 
 export default async function PostPage({ params } : any) {
   let config = await loadConfig();
+  const {postId} = await params;
   return (
       <div className={"PostPage"}>
           <Navbar />
-          <Post apiServerURI={config.apiServerURI} postId={params.postId} />
+          <Post apiServerURI={config.apiServerURI} postId={postId} />
       </div>
   )
   }
