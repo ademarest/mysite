@@ -8,8 +8,6 @@ async function loadConfig() {
 
 export default async function ContactPage(){
     let config = await loadConfig();
-    console.log(config);
-    console.log(config.apiServerURI);
     return (
         <div className="ContactPage">
             <Navbar/>
