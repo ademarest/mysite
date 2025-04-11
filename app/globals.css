@@ -73,24 +73,24 @@ body {
   padding-bottom:10px;
 }
 
-.PostText a:link{
+.PostContent a:link{
   color:var(--accent-cyan);
 }
 
-.PostText a:visited{
+.PostContent a:visited{
   color:var(--accent-cyan-dark);
 }
 
-.PostText a:hover{
+.PostContent a:hover{
   color:var(--accent-orange)
 }
 
-.PostText img {
+.PostContent img {
   max-height: 50vh;
   overflow: scroll;
 }
 
-.PostText blockquote {
+.PostContent blockquote {
   color: #58a4de;
   outline: 1px solid var(--main-outline-color);
   background-color: var(--sec-bg-color);
@@ -114,11 +114,11 @@ body {
   margin-right:2vw;
 }
 
-.PostText hr {
+.PostContent hr {
   border-color: #58a4de;
 }
 
-.PostText code{
+.PostContent code{
   font-size:85%;
 }
 
@@ -127,7 +127,7 @@ body {
  * selector allows us to apply css to all code not handled
  * by React Syntax Highlighter's known languages.
  * */
-.PostText code:not([class*="language-"]) {
+.PostContent code:not([class*="language-"]) {
   font-family: Menlo, Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
   display:inline-block;
   padding-top:0.125rem;
@@ -141,7 +141,7 @@ body {
   vertical-align:-0.25rem;
 }
 
-.PostText details {
+.PostContent details {
   font-family: sans-serif;
   color: var(--main-font-color);
   background-color: var(--sec-bg-color);
@@ -149,7 +149,7 @@ body {
   padding:6px 4px 4px 4px;
 }
 
-.PostText p {
+.PostContent p {
   overflow: auto;
 }
 
