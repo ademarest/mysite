@@ -16,7 +16,7 @@ export async function generateStaticParams(){
   }))
 }
 
-export default async function PostPage({ params } : any) {
+export default async function PostPage({ params } : {params: Promise<{postId:string}>}) {
   let config = await loadConfig();
   const {postId} = await params;
   return (
