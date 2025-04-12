@@ -82,7 +82,7 @@ const rmdUnorderListComponent = (ulprops: any) => {
 export default function PostText({ markdownContent }: any) {
   return (
     <ReactMarkdown
-      className={"PostText"}
+      /*className={"PostText"}*/
       remarkPlugins={[remarkGfm, remarkEmoji]}
       rehypePlugins={[rehypeRaw]}
       components={{
