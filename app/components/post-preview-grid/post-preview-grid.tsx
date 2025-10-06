@@ -29,21 +29,20 @@ const PostPreview = (props: any) => {
 
 const PostPreviewGridFromData = (postDataArray : any) => {
   postDataArray.sort((a:any, b:any) => new Date(b.postDatetime).valueOf() - new Date(a.postDatetime).valueOf());
-  let posts = postDataArray.map((postData: any) => {
-    const { postId, postTitle, postSubtext, postAuthor, postDatetime, gameId } = postData;
+  return postDataArray.map((postData: any) => {
+    const {postId, postTitle, postSubtext, postAuthor, postDatetime, gameId} = postData;
     return (
-      <PostPreview
-        key={postId}
-        id={postId}
-        title={postTitle}
-        subtext={postSubtext}
-        author={postAuthor}
-        datetime={postDatetime}
-        gameId={gameId}
-      />
+        <PostPreview
+            key={postId}
+            id={postId}
+            title={postTitle}
+            subtext={postSubtext}
+            author={postAuthor}
+            datetime={postDatetime}
+            gameId={gameId}
+        />
     );
   });
-  return posts;
 }
 
 export default async function PostPreviewGrid({ postDataArray }: any) {
