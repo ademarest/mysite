@@ -24,5 +24,5 @@ export default async function PostPage({ params } : {params: Promise<{postId:str
           <Navbar />
           <Post apiServerURI={config.apiServerURI} postId={postId} />
       </div>
-  )
+    )
   }
